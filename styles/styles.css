@@ -4,21 +4,221 @@
 /* font-family: 'Bungee Shade', cursive; */
 
 /* LES VARIABLES CSS ICI */
+:root{
+    --black:#000;
+    --white:#fff;
+    --couleur_principale:#a7829a;
+    --couleur_secondaire:darkgray;
+    --couleur_hero: linear-gradient(36deg,rgba(167,2,154,0.7)8%, rgba(167,2,154,0)100%);
 
+    --font_principal:'Cardo', serif;
+    --font-secondaire:'Bungee Shade', cursive;
+
+
+}
 /*---------------------- Generic ----------------------*/
 
 /* Mettre la ligne universelle pour le box-sizing */
 
-
+*, *::before, *::after{
+    box-sizing: border-box;
+}
 
 /*---------------------- Elements ----------------------*/
+body{
+    font-family: var(--font_principal);
+    font-size: 18px;
+
+    margin:0;
+}
+
+/*---------HERO-------------*/
+.hero{
+    height: 80vh;
+    background-color: var(--black);
+
+    position:relative;
+
+    color:var(--white);
+}
+
+a{
+    text-decoration: none;
+    color:var(--white);
+}
+
+.hero video{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.5;
+}
+.hero p, .hero a {
+    font-size: 24px;
+}
+.hero .content{
+    width: 100%;
+    height: 100%;
+
+    background: var(--couleur_hero);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 2;
+}
+.hero::after{
+    content:"";
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+h2{
+    font-family: var(--font-secondaire);
+    font-size: 80px;
+    line-height: 96px;
+    color:var(--white);
+}
+
+/*--------HEADER-------------*/
+.header-principal{
+    background-color: var(--black);
+
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 26;
+    width: 100%;
 
 
+}
+
+/*--------TITRES-------------*/
+h1{
+    font-family: var(--font-secondaire);
+    font-size: 36px;
+    line-height: 43px;
+
+    color:var(--white);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 152px;
+
+    margin:0;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    text-transform: uppercase;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*-----------INTERETS-------------*/
+.interet{
+    background-image: url("../images/bg-interet.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+
+    height: 1100px;
+
+    text-align: center;
+}
+
+.interet h3{
+    margin:0;
+    padding-top:66px
+}
+
+.cartes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.carte{
+    width: 30%;
+    height: 367px;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+    background-color: var(--white);
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 
+    padding: 20px;
 
+}
+.interet img{
+    height: 100%;
+    width: 100%;
+}
+
+/*-----------CITATIOIN-------------*/
+.citation{
+    background-image: url("../images/bg-citation.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+
+    height: 404px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.citation .conteneur{
+    margin-top:0;
+    padding: 100px 150px;
+
+    color: var(--white);
+}
+
+footer{
+    height: 144px;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 /*---------------------- Components ----------------------*/
-
+a:hover{
+  color: var(--couleur_principale);
+}
 
 
 
